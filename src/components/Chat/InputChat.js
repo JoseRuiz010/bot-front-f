@@ -2,6 +2,7 @@ import {
   IonButton,
   IonCol,
   IonFooter,
+  IonIcon,
   IonRow,
   IonTextarea,
 } from "@ionic/react";
@@ -11,6 +12,7 @@ import { useFormHook } from "../../CustomHooks/useFormHook";
 import { ConsultaService } from "../Service/ConsultaService";
 import "./styles.css";
 import { v4 as uuidv4 } from "uuid";
+import {sendOutline } from "ionicons/icons";
 
 export const InputChat = () => {
   const { pushMensaje } = useContext(MensajeContext);
@@ -70,7 +72,7 @@ export const InputChat = () => {
               expand="full"
               className="buttonSend"
             >
-              send
+              <IonIcon icon={sendOutline}></IonIcon>
             </IonButton>
           </IonCol>
         </IonRow>

@@ -1,7 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+ 
 
 .contentInput{
     display: flex;
@@ -11,7 +8,7 @@
 }
 
 .buttonSend{
-     
+    --border-radius: 5pxs;
     --padding-start: 0.5em;
     --padding-end: 0.5em;
 }

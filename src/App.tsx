@@ -24,9 +24,8 @@ import { Login } from "./components/Login/Login";
 
 import { RutasPrivadas } from "./components/RoutesPrivate/RutasPrivadas";
 
-import { DataContext, DataProvider } from "./Context/dataContext";
+import { DataContext } from "./Context/dataContext";
 import { useContext } from "react";
-import { ChatScreen } from "./components/Chat/ChatScreen";
 
 const App: React.FC = () => {
   const { isAuth } = useContext(DataContext);

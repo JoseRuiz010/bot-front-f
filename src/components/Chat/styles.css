@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contentInput{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 9px;
+}
+
+.buttonSend{
+     
+    --padding-start: 0.5em;
+    --padding-end: 0.5em;
+}
+
+.inputChat{
+    margin-top: 0px;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.msj{
+ 
+margin: 3px;
+background-color: #9ab1fa;
+ 
+}
+
+.fecha{
+    font-size: 11px;
+    font-style: italic;
+    padding: 0;
+}
+
+.content-chats{
+    margin: 7px;
+}
+
+ .msjCard-blue{
+     background-color: #dce3fa;
+ } 
+ 
+ .msjCard-gris{
+    background-color:#b3b3b6;
+}

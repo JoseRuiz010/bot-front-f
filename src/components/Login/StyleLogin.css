@@ -1,0 +1,69 @@
+ 
+ 
+ 
+ .img-login{
+    margin-top: 25px;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+    background-color: linear-gradient(155deg, #ff49ff 0, #ff49ff 16.67%, #f948fc 33.33%, #c643eb 50%, #933dd7 66.67%, #6238c4 83.33%, #2934b3 100%);;;
+}
+.img-loginc{
+     border-radius: 55%;
+     width: 250px;
+     background-color: linear-gradient(155deg, #ff49ff 0, #ff49ff 16.67%, #f948fc 33.33%, #c643eb 50%, #933dd7 66.67%, #6238c4 83.33%, #2934b3 100%);;;
+
+}
+
+.ContentFormLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 30px;
+  
+}
+
+.inp{  
+     
+     
+    margin-top: 15px;
+    width: 98%;
+    border-bottom: 1px solid white;
+}
+.InputsLogin{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.ButtonLogin{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+     }
+.buton{
+     border-radius: 20px;
+     background-color: lightsalmon;
+}
+.container{
+    border-radius: 1px;
+    width: 100%;
+     
+    
+}
+.IonContent{
+    --ion-background-color: linear-gradient(155deg, #ff49ff 0, #ff49ff 16.67%, #f948fc 33.33%, #c643eb 50%, #933dd7 66.67%, #6238c4 83.33%, #2934b3 100%);;
+}
+.textTitle{
+    text-align: center;
+    color: white;
+}

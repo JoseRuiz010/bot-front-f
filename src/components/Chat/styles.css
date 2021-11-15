@@ -1,46 +1,44 @@
- 
-
-.contentInput{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 9px;
+.contentInput {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 5px;
 }
 
-.buttonSend{
-    --border-radius: 5pxs;
-    --padding-start: 0.5em;
-    --padding-end: 0.5em;
+.buttonSend {
+  --border-radius: 5px;
+  --padding-start: 0.5em;
+  --padding-end: 0.5em;
 }
 
-.inputChat{
-    margin-top: 0px;
-    border: 1px solid var(--ion-color-medium);
-    border-radius: 10px;
-    background: #fff;
+.inputChat {
+  margin-top: 0px;
+  border: 1px solid var(--ion-color-medium);
+  border-radius: 10px;
+  background: #fff;
 }
 
-.msj{
- 
-margin: 3px;
-background-color: #9ab1fa;
- 
+.msj {
+  margin: 1px;
 }
 
-.fecha{
-    font-size: 11px;
-    font-style: italic;
-    padding: 0;
+.fecha {
+  font-size: 11px;
+  font-style: italic;
+  padding: 0;
 }
 
-.content-chats{
-    margin: 7px;
+.content-chats {
+  margin: 0px;
 }
 
- .msjCard-blue{
-     background-color: #dce3fa;
- } 
- 
- .msjCard-gris{
-    background-color:#b3b3b6;
+.msjCard-blue {
+  background-color: #dce3fa;
+}
+
+.msjCard-gris {
+  background-color: #b3b3b6;
+}
+.text-mensaje {
+  font-size: 15px;
 }

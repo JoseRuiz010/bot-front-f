@@ -4,7 +4,6 @@ import {
   IonContent,
   IonHeader,
   IonItem,
- 
   IonList,
   IonPage,
   IonTitle,
@@ -12,7 +11,7 @@ import {
 } from "@ionic/react";
 import React from "react";
 import { Noticia } from "./Noticia";
-
+import { dataNoticias } from "../../data/dataNoticias";
 export const Noticias = () => {
   return (
     <IonPage>
@@ -26,9 +25,9 @@ export const Noticias = () => {
       </IonHeader>
       <IonContent>
         <IonList>
-          <IonItem>
-            <Noticia></Noticia>
-          </IonItem>
+          {dataNoticias.map((n) => (
+            <Noticia noticia={n}></Noticia>
+          ))}
         </IonList>
       </IonContent>
     </IonPage>

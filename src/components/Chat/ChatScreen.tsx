@@ -8,8 +8,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { useContext } from "react";
-import { MensajeContext } from "../../Context/mensajeContext";
+
 import { ContentChat } from "./ContentChat";
 import { InputChat } from "./InputChat";
 

@@ -12,11 +12,11 @@ export const Mensaje = ({
   m: any;
 }) => {
   return (
-    <IonCol className={`msj ${color}`} size={size} offset={offset}>
+    <IonCol className={`msj `} size={size} offset={offset}>
       <IonCard className={`msjCard ${color}`}>
         <b>{m.creador}</b>
         <br />
-        <span>{m.mensaje}</span>
+        <span className="text-mensaje">{m.mensaje}</span>
         <div className="fecha">{m.fecha}</div>
       </IonCard>
     </IonCol>

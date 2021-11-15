@@ -1,12 +1,11 @@
 import { IonGrid, IonInfiniteScroll, IonRow } from "@ionic/react";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { MensajeContext } from "../../Context/mensajeContext";
 import { Mensaje } from "./Mensaje";
 
 export const ContentChat = () => {
   const { mensajes } = useContext(MensajeContext);
 
-  
   return (
     <>
       <IonGrid>
@@ -32,15 +31,7 @@ export const ContentChat = () => {
           )}
         </IonRow>{" "}
       </IonGrid>
-      <IonInfiniteScroll position="bottom"></IonInfiniteScroll>
+      <IonInfiniteScroll position="top"></IonInfiniteScroll>
     </>
   );
 };
-
-/*
-<IonCol size="9" className="msj" offset="3">
-            <b>Jose</b> <br />
-            <span>Lorem ipsum dolor sit amet.</span>
-            <div>11/11/11</div>
-          </IonCol>
-*/

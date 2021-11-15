@@ -5,6 +5,8 @@ import {
   IonFabList,
   IonHeader,
   IonIcon,
+  IonItemDivider,
+  IonLabel,
   IonPage,
   IonTitle,
   IonToolbar,
@@ -12,6 +14,7 @@ import {
 import {
   add,
   chatbox,
+  gridOutline,
   logOut,
   newspaper,
   personCircleOutline,
@@ -20,6 +23,7 @@ import { useContext } from "react";
 import { RouteComponentProps } from "react-router";
 import { DataContext } from "../../Context/dataContext";
 import { Noticia } from "../Noticias/Noticia";
+import { Slide } from "./Slide";
 import "./styleHome.css";
 export const Home: React.FC<RouteComponentProps> = (props) => {
   const { setisAuth } = useContext(DataContext);
@@ -28,36 +32,19 @@ export const Home: React.FC<RouteComponentProps> = (props) => {
       <IonHeader>
         <IonToolbar>
           <IonTitle className="title">Inicio</IonTitle>
-
-          <IonIcon
-            className="iconPerfil"
-            slot="start"
-            icon={personCircleOutline}
-          ></IonIcon>
         </IonToolbar>
       </IonHeader>
 
-
-
-      <IonContent>
-
-          <Noticia></Noticia>
-          <Noticia></Noticia>
-
+      <IonContent className="content">
+        <IonItemDivider color="primary">
+          <IonLabel>Ultimas Noticias</IonLabel>
+        </IonItemDivider>
+        <Slide></Slide>
       </IonContent>
-
-
-
-
-
-
-
-
-
 
       <IonFab vertical="bottom" horizontal="end">
         <IonFabButton>
-          <IonIcon icon={add} />
+          <IonIcon icon={gridOutline} />
         </IonFabButton>
         <IonFabList side="top">
           <IonFabButton onClick={() => setisAuth(false)}>

@@ -5,6 +5,7 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { DataProvider } from "./Context/dataContext";
 import { MensajeProvider } from "./Context/mensajeContext";
+import { NoticiasProvider } from "./Context/NoticiasContext";
 
 ReactDOM.render(
   <React.StrictMode>

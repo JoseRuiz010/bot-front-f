@@ -1,27 +1,28 @@
 import {
+  IonButton,
   IonCard,
   IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
+  IonRouterLink,
 } from "@ionic/react";
+import { Link } from "react-router-dom";
 
 import "./styleNoticia.css";
-export const Noticia = () => {
+export const Noticia = ({ noticia }: { noticia: any }) => {
   return (
     <IonCard className="card">
-      <img
-        className="card-img"
-        src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tour_eiffel_at_sunrise_from_the_trocadero.jpg"
-        alt="img"
-      />
+      <div className="content-img">
+        <img className="card-img" src={noticia.imagen} alt="img" />
+      </div>
       <IonCardHeader className="card-header">
-        <IonCardSubtitle>Destination</IonCardSubtitle>
-        <IonCardTitle>Madison, WI</IonCardTitle>
+        <IonCardSubtitle>{noticia.subtitle}</IonCardSubtitle>
+        <IonCardTitle>{noticia.title}</IonCardTitle>
       </IonCardHeader>
       <IonCardContent className="card-content">
-        Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-        Madison was named the capital of the Wisconsin Territory in 1836.
+        {noticia.content}
+        <Link to={`/home/noticia/${noticia.id}`}>Ver mas...</Link>
       </IonCardContent>
     </IonCard>
   );

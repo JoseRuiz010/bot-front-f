@@ -1,13 +1,17 @@
 import {
   IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardTitle,
   IonContent,
-  IonHeader,
+ 
+  IonIcon,
   IonInput,
   IonPage,
-  IonTitle,
-  IonToolbar,
+  IonThumbnail,
+ 
 } from "@ionic/react";
-
+import Swal from "sweetalert2";
 import { useContext } from "react";
 import { DataContext } from "../../Context/dataContext";
 import { useFormHook } from "../../CustomHooks/useFormHook";
@@ -25,55 +29,62 @@ export const Login = () => {
     e.preventDefault();
     Login(form);
     //console.log(form);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Inicio de sesion exitoso",
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    /*Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Las credenciales ingresadas son incorrectas",
+    });*/
+
     setisAuth(true);
   };
   return (
     <IonPage>
-      <IonContent className="IonContent">
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>
-              <IonHeader className="textTitle">Login </IonHeader>
-            </IonTitle>
-          </IonToolbar>
-        </IonHeader>
+      <IonContent
+        style={{
+          backgroundImage: "https://wallpaperaccess.com/full/3162193.png",
+        }}
+        className="IonContent"
+      >
+        <div className="fondo"> </div>
+        <IonThumbnail>
+          <IonIcon></IonIcon>
+        </IonThumbnail>
 
-        <div className="ContentFormLogin">
-          <div className="img-Login">
-            <img
-              alt="img"
-              className="img-loginc"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAIYiXQrd08RbDNiVrVDUDUatDREpKOyj14pjQ8g37DNFiZ1kLBnI5Mnw7O5SvyAAb-8&usqp=CAU"
-            ></img>
-          </div>
+        <IonCard className="card-login">
+          <IonCardTitle style={{ fontWeight: "bold", fontSize: "20px" }}>
+            Login
+          </IonCardTitle>
+          <IonCardContent className="content-Input">
+            <IonInput
+              className="inp"
+              name="user"
+              placeholder="Usuario"
+              onIonChange={(e) => handleForm(e)}
+            ></IonInput>
+            <IonInput
+              className="inp"
+              onIonChange={handleForm}
+              name="contraseña"
+              placeholder="Contraseña"
+              type="password"
+            ></IonInput>
 
-          <form>
-            <div className="InputsLogin">
-              <IonInput
-                className="inp"
-                name="user"
-                placeholder="Usuario"
-                onIonChange={(e) => handleForm(e)}
-              ></IonInput>
-              <IonInput
-                className="inp"
-                onIonChange={handleForm}
-                name="contraseña"
-                placeholder="Contraseña"
-                type="password"
-              ></IonInput>
-            </div>
-            <div className="ButtonLogin">
-              <IonButton
-                className="buton"
-                color="primary"
-                onClick={(e) => onSubmit(e)}
-              >
-                Primary
-              </IonButton>
-            </div>
-          </form>
-        </div>
+            <IonButton
+              className="buton"
+              color="primary"
+              onClick={(e) => onSubmit(e)}
+            >
+              Ingresar
+            </IonButton>
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
